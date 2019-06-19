@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>时间报表</title>
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <link href="css/timereport.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="./js/SuperSlide.2.1.js"></script>
+	<script type="text/javascript" src="js/public.js"></script>
+	<script type="text/javascript" src="js/timereport.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div class="topName">
+				<img src="img/logo.png">
+				</img>
+				<span>研究院机构开发服务管理系统</span>
+				<div class="topUser">
+					<a href="userinfo.html"><img src="img/boy2.png" alt="头像"></a>
+					<a href="userinfo.html" class="name"></a>
+				</div>
+				<div class="topLogin">
+					<!--<a href="#">登录</a>-->
+					<a href="javascript:logout()">注销</a>
+				</div>
+			</div>
+		<div class="navBar">
+			<ul class="nav clearfix">
+				<li class="m">
+					<h3><a href="index.html">网站首页</a></h3>
+				</li>
+				<li class="s">|</li>
+				<li class="m">
+					<h3><a href="#">我的客户</a></h3>
+					<ul class="sub">
+						<li><a href="./setcustomer.html">客户立项</a></li>
+						<li><a href="mtcustomer.html">客户维护</a></li>
+
+					</ul>
+				</li>
+				<li class="s">|</li>
+				<li class="m">
+					<h3><a href="#">工作报表</a></h3>
+					<ul class="sub">
+						<li><a href="staffreport.html">员工报表</a></li>
+						<li><a href="timereport.html">时间报表</a></li>
+						<li><a href="typereport.html">类型报表</a></li>
+					</ul>
+				</li>
+				<li class="s">|</li>
+				<li class="m">
+					<h3><a href="#">系统设置</a></h3>
+					<ul class="sub" style="display: none;">
+						<li><a href="userinfo.html">账户信息</a></li>
+						<li><a href="mdpassword.html">密码修改</a></li>
+						<li><a href="organization.html">部门管理</a></li>
+						<li><a href="member.html">成员管理</a></li>
+					</ul>
+				</li>
+				<li class="block" style="left:251px;"></li>
+			</ul>
+		</div>
+        <div class="pageName">>>>时间报表</div>
+        <div class="content">
+            <div class="title">统计详情</div>
+            <div class="timeList">
+				<table cellspacing="1" cellpadding="0">
+					<tr class="header">
+						<td>时间</td>
+						<td>客户量</td>
+						<td>维护量</td>
+					</tr>
+
+				</table>
+
+
+
+				<!--<ul title="双击查看具体信息">-->
+					<!--<li class="workId">1</li>-->
+					<!--<li class="jobTime">2018-10-25 12:30:20</li>-->
+					<!--<li class="job">拜访客户<span>回复</span></li>-->
+					<!--<div class="reply">-->
+						<!--<textarea name="" id="" cols="30" rows="10"></textarea>-->
+						<!--<div>-->
+							<!--<button class="replyCommit">回复</button>-->
+							<!--<button class="replyCancel">取消</button>-->
+						<!--</div>-->
+					<!--</div>-->
+				<!--</ul>-->
+
+				<!--<ul title="双击查看具体信息">-->
+					<!--<li class="workId">2</li>-->
+					<!--<li class="jobTime">2018-10-28 12:30:20</li>-->
+					<!--<li class="job">再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户<span>回复</span></li>-->
+					<!--<div class="reply">-->
+						<!--<textarea name="" id="" cols="30" rows="10"></textarea>-->
+						<!--<div>-->
+							<!--<button class="replyCommit">回复</button>-->
+							<!--<button class="replyCancel">取消</button>-->
+						<!--</div>-->
+					<!--</div>-->
+
+				<!--</ul>-->
+
+				<!--<ul title="双击查看具体信息">-->
+					<!--<li class="workId">3</li>-->
+					<!--<li class="jobTime">2018-11-05 12:30:20</li>-->
+					<!--<li class="job">约好的拜访客户，却发现客户不在家 <span>回复</span></li>-->
+					<!--<div class="reply">-->
+						<!--<textarea name="" id="" cols="30" rows="10"></textarea>-->
+						<!--<div>-->
+							<!--<button class="replyCommit">回复</button>-->
+							<!--<button class="replyCancel">取消</button>-->
+						<!--</div>-->
+					<!--</div>-->
+				<!--</ul>-->
+
+            </div>
+        </div>
+
+        <div class="footer">
+		<!--<div class="footer_links">-->
+			<!--<a href="">关于我们</a>-->
+			<!--<span>|</span>-->
+			<!--<a href="">联系我们</a>-->
+			<!--<span>|</span>-->
+			<!--<a href="">招聘人才</a>-->
+			<!--<span>|</span>-->
+			<!--<a href="">友情链接</a>-->
+		<!--</div>-->
+		<p class="copyright">
+			CopyRight © 2018 瑞达期货股份有限公司研究院 All Rights Reserved<br/>电话：010-****888    京ICP备*******8号
+		</p>
+	</div>
+    </div>
+</body>
+</html>

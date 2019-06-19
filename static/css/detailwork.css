@@ -1,0 +1,271 @@
+.pageName{
+    float: left;
+    font-size: 13px;
+    color: #2e558e;
+    margin: 5px 0 0 10px;
+}
+
+.csDetail{
+    width: 80%;
+    margin: 50px auto;
+    background-color: white;
+    padding-bottom: 20px;
+    box-shadow: 7px -5px 5px #999999;
+}
+.csDetail .title{
+    width: 100%;
+    text-align: center;
+    background: url("../img/white-title.png");
+    text-shadow: 0 1px #ffffff;
+    height: 35px;
+    font-size: 20px;
+    line-height: 34px;
+    font-weight: bold;
+
+}
+
+.jobListTitle{
+    margin: 20px 0 10px 5%;
+}
+.jobListTitle span{
+    /*display: inline-block;*/
+    padding: 3px 8px;
+    font-size: 14px;
+    background-color: #2a558a;
+    color: white;
+}
+.csDetail .work{
+    width: 90%;
+    margin: 5px 5% 0 5%;
+    /*padding: 10px 50px 20px 50px;*/
+    border: 2px dashed #CCC;
+    background-color: #E6E4E3;
+ }
+.csDetail .notes{
+    /*position: relative;*/
+    width: 90%;
+    margin: 5px 5% 0 5%;
+    /*padding: 10px 50px 20px 50px;*/
+    border: 2px dashed #CCC;
+}
+.csDetail .work table{
+    width: 96%;
+    margin: 5px 2% 5px 2%;
+}
+.csDetail .work table td{
+    font-size: 15px;
+    /*font-family: "Microsoft YaHei", SimSun, SimHei;*/
+    padding: 5px 0;
+}
+
+.csDetail .work .explain{
+    text-align: right;
+    vertical-align: top;
+    width: 7%;
+
+}
+.work .work-file{
+    color: #639ACA;
+}
+.work .work-file:hover{
+    cursor: pointer;
+    color: #FF8400;
+}
+.csDetail .noNote{
+    margin: 5px 5% 0 5%;
+}
+
+.csDetail .notes ul{
+    margin: 5px;
+    border-bottom: 1px dotted darkgray;
+    padding-bottom: 10px;
+}
+.csDetail .notes ul:hover{
+    background-color: azure;
+}
+.csDetail .notes .noteAuthor{
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    color: darkblue;
+}
+.csDetail .notes .noteId{
+    display: none;
+}
+.csDetail .notes span{
+    font-weight: normal !important;
+    float: right;
+    font-size: 10px;
+    /*font-style: italic;*/
+    margin-right: 6px;
+    color: dimgrey;
+
+}
+.csDetail .notes .note{
+    margin-left: 20px;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    line-height: 23px;
+}
+.csDetail .notes .showReply, .csDetail .notes .hideReply{
+    font-size: 10px;
+    color: #639ACA;
+    text-align: center;
+    cursor: pointer;
+}
+.csDetail .notes .subs{
+    display: none;
+}
+
+.csDetail .notes .subNote{
+
+    border-bottom: none;
+    /*border-top: 1px dotted darkgray ;*/
+    padding: 0;
+}
+.csDetail .notes .subNote .subAuthor{
+    font-size: 13px;
+    margin-left: 15px;
+}
+.csDetail .notes .subNote em{
+    font-style: normal;
+    color: dodgerblue;
+}
+.csDetail .notes .subNote span{
+    margin-right: 20px;
+    font-size: 6px;
+    font-style: italic;
+}
+.csDetail .notes .subNote .note{
+    margin-left: 40px;
+}
+.csDetail .notes .subNote .note span, .csDetail .notes .note span{
+    font-style: normal;
+    cursor: pointer;
+}
+.csDetail .notes .subNote .reply{
+    display: none;
+    margin-top: 5px;
+    margin-left: 40px;
+}
+.csDetail .notes .reply{
+    display: none;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+.csDetail .notes .subNote .reply textarea{
+    width: 97%;
+    height: 30px;
+}
+.csDetail .notes .reply textarea{
+    width: 99%;
+    height: 23px;
+    font-size: 15px;
+}
+.csDetail .notes .subNote .reply div{
+    text-align: right;
+    margin:5px 3%;
+}
+.csDetail .notes .reply div{
+    text-align: right;
+    margin:5px 1%;
+}
+.csDetail .notes .subNote .reply button, .csDetail .notes .reply button{
+    font-size: 6px;
+    width: 40px;
+    background-color: #639ACA;
+    color: white;
+    margin-left: 5px;
+}
+/*.csDetail .jobList .jobFile{*/
+    /*text-align: right;*/
+
+/*}*/
+/*.csDetail .jobList .jobFile a{*/
+    /*font-size: 14px;*/
+    /*background-color: #C7C7C7;*/
+    /*color: white;*/
+    /*border-radius: 3px;*/
+    /*padding: 3px;*/
+    /*display: inline-block;*/
+    /*margin-right: 10px;*/
+    /*margin-bottom: 6px;*/
+/*}*/
+
+/*.hasjobFile{*/
+    /*background-color: #6D6D6D !important;*/
+/*}*/
+/*.csDetail button{*/
+    /*display: block;*/
+    /*width: 20%;*/
+    /*margin: 15px  auto;*/
+    /*height: 44px;*/
+    /*background: #2a558a;*/
+    /*color: #fff;*/
+    /*font-size: 14px;*/
+    /*font-family: "微软雅黑";*/
+    /*border: none;*/
+    /*border-radius: 5px;*/
+/*!*}*!*/
+/*.add{*/
+    /*display: none;*/
+    /*width: 400px;*/
+    /*height: 260px;*/
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*left: 50%;*/
+    /*margin-left: -200px;*/
+    /*margin-top: -80px;*/
+    /*background-color: #BADBDD;*/
+/*}*/
+/*.add .title{*/
+    /*font-weight: bold;*/
+    /*background-color: #639ACA;*/
+    /*text-align: center;*/
+    /*height: 35px;*/
+    /*line-height: 35px;*/
+    /*border-radius: 5px 5px 0 0 ;*/
+/*}*/
+/*.add .workText{*/
+    /*width: 90%;*/
+    /*font-size: 15px;*/
+    /*margin: 10px auto;*/
+/*}*/
+/*.add .title span{*/
+    /*float: right;*/
+    /*margin-right: 8px;*/
+    /*color: #2e558e;*/
+    /*cursor: pointer;*/
+    /*font-size: 12px;*/
+/*}*/
+
+/*.add .workText label{*/
+    /*display: block;*/
+    /*color: #000000;*/
+    /*font-size: 15px;*/
+/*}*/
+/*.add .workText textarea{*/
+    /*width: 100%;*/
+    /*height: 100px;*/
+/*}*/
+/*.add .addFile{*/
+    /*display: inline-block;*/
+    /*font-size: 10px;*/
+    /*margin-left: 5%;*/
+/*}*/
+/*.add .btn{*/
+    /*margin: 10px auto;*/
+    /*text-align: center;*/
+/*}*/
+/*.add label{*/
+    /*font-size: 12px;*/
+    /*color: #2a558a;*/
+/*}*/
+/*.add .btn button{*/
+     /*width: 70px;*/
+    /*height: 25px;*/
+    /*font-size: 12px;*/
+    /*margin: 10px 15px;*/
+    /*background-color: #2a558a;*/
+    /*color: white;*/
+/*}*/

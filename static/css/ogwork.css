@@ -1,0 +1,104 @@
+.workListTitle{
+    margin: 20px 0 0 3%;
+}
+.workListTitle select{
+    height: 20px;
+}
+.workListTitle span{
+    /*display: inline-block;*/
+    padding: 3px 8px;
+    font-size: 14px;
+    background-color: #2a558a;
+    color: white;
+}
+
+.pageName{
+    float: left;
+    font-size: 13px;
+    color: #2e558e;
+    margin: 5px 0 0 10px;
+}
+.content{
+    width: 80%;
+    margin: 50px auto;
+    background-color: white;
+    padding-bottom: 20px;
+    box-shadow: 7px -5px 5px #999999;
+}
+.content .title{
+     width: 100%;
+    text-align: center;
+    background: url("../img/white-title.png");
+    text-shadow: 0 1px #ffffff;
+    height: 35px;
+    font-size: 20px;
+    line-height: 34px;
+    font-weight: bold;
+}
+.content .workList{
+    width: 90%;
+    /*margin: 20px 5% 0 5%;*/
+    margin: 8px auto;
+    padding: 10px 20px 20px 20px;
+    border: 2px dashed #CCC;
+}
+.workList ul{
+    border-bottom: 1px solid silver;
+    margin-bottom: 10px;
+}
+.workList ul:hover{
+    background-color: #F2F2F2;
+    /*color: white;*/
+    /*background: #C8C8C8;*/
+    /*cursor: pointer;*/
+
+}
+.unread{
+    background: red;
+}
+.workList .work{
+
+}
+.workList ul li{
+    width: 100%;
+    display: inline-block;
+    line-height: 25px;
+    font-size: 14px;
+    padding: 2px 5px;
+
+}
+.workList ul li div{
+    margin-right: 5px;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 5px;
+
+}
+
+.workList ul li .time{
+    font-size: 10px;
+    color: #999999;
+    float: right;
+}
+.workList ul li .sponsor{
+    font-size: 14px;
+    color: #FF8400;
+}
+
+.workList p{
+    display: inline-block;
+    color: #639ACA;
+}
+.workList .button{
+
+}
+.workList  button{
+    float: right;
+    width: 45px;
+    font-size: 12px;
+   margin-left: 10px;
+}
+
+
+

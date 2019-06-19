@@ -1,0 +1,200 @@
+
+.pageName{
+    float: left;
+    font-size: 13px;
+    color: #2e558e;
+    margin: 5px 0 0 10px;
+}
+.content{
+    width: 80%;
+    margin: 50px auto;
+    background-color: white;
+    padding-bottom: 20px;
+    box-shadow: 7px -5px 5px #999999;
+}
+.content .title{
+     width: 100%;
+    text-align: center;
+    background: url("../img/white-title.png");
+    text-shadow: 0 1px #ffffff;
+    height: 35px;
+    font-size: 20px;
+    line-height: 34px;
+    font-weight: bold;
+}
+
+.content .choose{
+    width: 90%;
+    margin: 10px 5% 0 5%;
+}
+.content .choose label{
+    vertical-align: middle;
+    line-height: 22px;
+    height: 15px;
+    font-size: 15px;
+
+}
+.content .choose select{
+    vertical-align: middle;
+    line-height: 22px;
+    /*width: 12%;*/
+}
+.content .choose button{
+    width: 8%;
+    height: 22px;
+    background-color: #639ACA;
+    color: white;
+}
+.content .subAccount{
+    width: 90%;
+    margin: 10px 5% 40px 5%;
+    padding: 10px 5px 20px 5px;
+    border: 2px dashed #CCC;
+}
+.content .subAccount .user{
+    margin: 0 10px;
+    border-bottom: 1px solid #DADBDD;
+}
+
+.content .subAccount .user li{
+    display: inline-block;
+    margin: 10px 0 0 0 ;
+}
+.content .user .showCs{
+    /*vertical-align: middle;*/
+    /*margin: 10px 5px 0 0 ;*/
+    float: right;
+    font-size: 12px;
+    padding: 0 3px;
+    border-radius: 2px;
+    background-color: #639ACA;
+    color: white;
+    cursor: pointer;
+
+}
+.content .user .name{
+    width: 40%;
+    font-size: 15px;
+    font-weight: bold;
+}
+.content .user .org{
+    font-size: 13px;
+    width: 20%;
+    color: #6D6D6D;
+}
+.content .subAccount .addBtn{
+    text-align: right;
+    margin:20px 10px  0 10px;
+}
+
+.content .subAccount .addBtn .add{
+    font-size: 13px;
+    background-color: #2a558a;
+    color: white;
+    padding: 0 7px;
+    outline: none;
+}
+.userCs{
+    display: none;
+    margin-left: 30px;
+}
+.userCs ul{
+    padding-left: 5px;
+    border-radius: 4px;
+}
+.userCs ul li{
+    display: inline-block;
+    margin: 2px 0;
+}
+.userCs .csName{
+    width: 88%;
+    font-size: 14px;
+}
+.userCs .give, .userCs .delete{
+    padding: 0 2px;
+    margin-right: 10px;
+    font-size: 12px;
+    background-color: #6D6D6D;
+    color: whitesmoke;
+}
+.userCs .give:hover, .userCs .delete:hover{
+    cursor:pointer;
+    color: #FF8400;
+}
+.userCs ul:hover{
+    background-color: #E6E4E3;
+}
+.giveTo, .addUser{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -115px;
+    margin-left: -150px;
+    width: 300px;
+    height: 220px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    border: 1px solid #79aec8;
+    z-index: 3;
+}
+.giveTo .title, .addUser .title{
+    font-weight: bold;
+    background-color: #79aec8;
+    height: 35px;
+    padding-left: 10px;
+    line-height: 35px;
+    border-radius: 5px 5px 0 0 ;
+}
+.giveTo .title span, .ogWork .title span, .support .title span, .modify .title span{
+    float: right;
+    margin-right: 5px;
+    color: #2e558e;
+    cursor: pointer;
+    font-size: 12px;
+
+}
+
+.giveTo form table{
+    margin: 20px auto;
+}
+
+.giveTo form table td{
+    font-size: 15px;
+    padding: 12px 0;
+}
+.giveTo table .select{
+    width: 70%;
+}
+.giveTo table .select select{
+    width: 100%;
+}
+.giveTo button, .addUser button{
+    width: 70px;
+    height: 25px;
+    font-size: 12px;
+    margin-left: 25px;
+    border: 1px solid #bce8f1;
+    border-radius: 5px;
+    background: #F3F3F3;
+}
+.giveTo button:hover, .addUser button:hover{
+    color: #FF8400;
+}
+.giveTo .btn, .ogWork .btn, .support .btn{
+    margin: 0 auto;
+    text-align: center;
+}
+.addUser .item {
+    text-align: center;
+    margin: 15px auto;
+}
+.addUser .item div{
+    position: absolute;
+    color: red;
+    font-size: 10px;
+    margin-left: 100px;
+}
+.addUser button{
+    margin-top: 10px;
+}

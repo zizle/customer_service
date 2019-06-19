@@ -1,0 +1,283 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>客户维护</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+	<link href="css/index.css" rel="stylesheet" type="text/css" />
+	<link href="css/detailwork.css" rel="stylesheet" type="text/css" />
+	<script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="./js/SuperSlide.2.1.js"></script>
+	<script type="text/javascript" src="js/public.js"></script>
+	<script type="text/javascript" src="js/detailwork.js"></script>
+
+	</head>
+<body background="img/bg.png">
+	<div id="container">
+		<div class="topName">
+				<img src="img/logo.png">
+				</img>
+				<span>研究院机构开发服务管理系统</span>
+				<div class="topUser">
+					<a href="userinfo.html"><img src="img/boy2.png" alt="头像"></a>
+					<a href="userinfo.html" class="name"></a>
+				</div>
+				<div class="topLogin">
+					<!--<a href="#">登录</a>-->
+					<a href="javascript:logout()">注销</a>
+				</div>
+			</div>
+		<div class="navBar">
+			<ul class="nav clearfix">
+				<li class="m">
+					<h3><a href="index.html">网站首页</a></h3>
+				</li>
+				<li class="s">|</li>
+				<li class="m">
+					<h3><a href="#">我的客户</a></h3>
+					<ul class="sub">
+						<li><a href="./setcustomer.html">客户立项</a></li>
+						<li><a href="mtcustomer.html">客户维护</a></li>
+
+					</ul>
+				</li>
+				<li class="s">|</li>
+				<li class="m">
+					<h3><a href="#">工作报表</a></h3>
+					<ul class="sub">
+						<li><a href="staffreport.html">员工报表</a></li>
+						<li><a href="timereport.html">时间报表</a></li>
+						<li><a href="typereport.html">类型报表</a></li>
+					</ul>
+				</li>
+				<li class="s">|</li>
+				<li class="m">
+					<h3><a href="#">系统设置</a></h3>
+					<ul class="sub" style="display: none;">
+						<li><a href="userinfo.html">账户信息</a></li>
+						<li><a href="mdpassword.html">密码修改</a></li>
+						<li><a href="organization.html">部门管理</a></li>
+						<li><a href="member.html">成员管理</a></li>
+					</ul>
+				</li>
+				<li class="block" style="left:251px;"></li>
+			</ul>
+		</div>
+		<div class="pageName">>>>工作详情</div>
+
+		<div class="csDetail">
+            <div class="title">工作详情</div>
+			<div class="jobListTitle"><span>当前事项</span></div>
+			<div class="work">
+				<table>
+					<tr>
+						<td class="explain">时&nbsp;&nbsp;&nbsp;间：</td>
+						<td>2018-10-25 12:30:20</td>
+					</tr>
+					<tr>
+						<td class="explain">工作者：</td>
+						<td>张三</td>
+					</tr>
+					<tr>
+						<td class="explain">事&nbsp;&nbsp;&nbsp;项：</td>
+						<td>拜访客户拜访客户拜访客户拜访客户拜访客户拜访客户拜访客户拜访客户拜访客户拜访客户拜访客户拜访客户拜访客户拜访客户拜访客户拜访客户拜访客户拜访客户拜访客户拜访客户访客户拜访客户</td>
+					</tr>
+					<tr>
+						<td class="explain">附&nbsp;&nbsp;&nbsp;件：</td>
+						<td>Not Found</td>
+					</tr>
+				</table>
+			</div>
+
+			<div class="jobListTitle"><span>回复记录</span></div>
+
+			<!--<div class="noNote">-->
+				<!--* 当前事项还没有任何批注哦!-->
+			<!--</div>-->
+
+			<div class="notes">
+				<ul>
+					<li class="noteId">3</li>
+					<li class="noteAuthor">王大年<span>2018-10-25 12:30:20</span></li>
+					<li class="note">首次拜访客户我们就要了解到客户的资金，意向....<span>回复</span></li>
+					<div class="reply">
+						<textarea name="" id="" cols="30" rows="10"></textarea>
+						<div>
+							<button class="replyCommit">回复</button>
+							<button class="replyCancel">取消</button>
+						</div>
+					</div>
+					<li class="showReply">查看回复↓</li>
+					<li class="subs">
+						<ul class="subNote">
+							<li class="subAuthor"><em>张三</em>回复<em>王大年</em><span>2018-10-25 12:30:20</span></li>
+							<li class="note">这次拜访中没有任何收获<span>回复</span></li>
+							<div class="reply">
+								<textarea name="" id="" cols="30" rows="10"></textarea>
+								<div>
+									<button class="replyCommit">回复</button>
+									<button class="replyCancel">取消</button>
+								</div>
+							</div>
+						</ul>
+						<ul class="subNote">
+							<li class="noteId">3-2</li>
+							<li class="subAuthor"><em>王大年</em>回复<em>张三</em><span>2018-10-25 12:30:20</span></li>
+							<li class="note">没有关系，再接再厉！<span>回复</span></li>
+							<div class="reply">
+						<textarea name="" id="" cols="30" rows="10"></textarea>
+						<div>
+							<button class="replyCommit">回复</button>
+							<button class="replyCancel">取消</button>
+						</div>
+					</div>
+						</ul>
+						<ul class="subNote">
+							<li class="noteId">3-3</li>
+							<li class="subAuthor"><em>张三</em>回复<em>王大年</em><span>2018-10-25 12:30:20</span></li>
+							<li class="note">这次拜访中没有任何收获<span>回复</span></li>
+							<div class="reply">
+								<textarea name="" id="" cols="30" rows="10"></textarea>
+								<div>
+									<button class="replyCommit">回复</button>
+									<button class="replyCancel">取消</button>
+								</div>
+							</div>
+						</ul>
+						<ul class="hideReply subNote">收起回复↑</ul>
+					</li>
+
+				</ul>
+
+				<ul>
+					<li class="noteId">2</li>
+					<li class="noteAuthor">王大年<span>2018-10-25 12:30:20</span></li>
+					<li class="note">再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户再次拜访客户<span>回复</span></li>
+					<div class="reply">
+						<textarea name="" id="" cols="30" rows="10"></textarea>
+						<div>
+							<button class="replyCommit">回复</button>
+							<button class="replyCancel">取消</button>
+						</div>
+					</div>
+				</ul>
+
+				<ul>
+					<li class="noteId">1</li>
+					<li class="noteAuthor">王大年<span>2018-10-25 12:30:20</span></li>
+					<li class="note">约好的拜访客户，却发现客户不在家<span>回复</span></li>
+					<div class="reply">
+						<textarea name="" id="" cols="30" rows="10"></textarea>
+						<div>
+							<button class="replyCommit">回复</button>
+							<button class="replyCancel">取消</button>
+						</div>
+					</div>
+					<li class="showReply">查看回复↓</li>
+					<li class="subs">
+						<ul class="subNote">
+							<li class="noteId">1-1</li>
+							<li class="subAuthor"><em>张三</em>回复<em>王大年</em><span>2018-10-25 12:30:20</span></li>
+							<li class="note">这次拜访中没有任何收获<span>回复</span></li>
+							<div class="reply">
+								<textarea name="" id="" cols="30" rows="10"></textarea>
+								<div>
+									<button class="replyCommit">回复</button>
+									<button class="replyCancel">取消</button>
+								</div>
+							</div>
+						</ul>
+						<ul class="hideReply subNote">收起回复↑</ul>
+					</li>
+				</ul>
+
+				<ul>
+					<li class="noteId">4</li>
+					<li class="noteAuthor">王大年<span>2018-10-25 12:30:20</span></li>
+					<li class="note">首次拜访客户我们就要了解到客户的资金，意向....首次拜访客户我们就要了解到客户的资金，意向....首次拜访客户我们就要了解到客户的资金，意向....首次拜访客户我们就要了解到客户的资金，意向....<span>回复</span></li>
+					<div class="reply">
+						<textarea name="" id="" cols="30" rows="10"></textarea>
+						<div>
+							<button class="replyCommit">回复</button>
+							<button class="replyCancel">取消</button>
+						</div>
+					</div>
+					<li class="showReply">查看回复↓</li>
+					<li class="subs">
+						<ul class="subNote">
+							<li class="noteId">4-1</li>
+							<li class="subAuthor"><em>张三</em>回复<em>王大年</em><span>2018-10-25 12:30:20</span></li>
+							<li class="note">这次拜访中没有任何收获<span>回复</span></li>
+							<div class="reply">
+						<textarea name="" id="" cols="30" rows="10"></textarea>
+						<div>
+							<button class="replyCommit">回复</button>
+							<button class="replyCancel">取消</button>
+						</div>
+					</div>
+						</ul>
+						<ul class="subNote">
+							<li class="noteId">4-3</li>
+							<li class="subAuthor"><em>王大年</em>回复<em>张三</em><span>2018-10-25 12:30:20</span></li>
+							<li class="note">没有关系，再接再厉！<span>回复</span></li>
+							<div class="reply">
+						<textarea name="" id="" cols="30" rows="10"></textarea>
+						<div>
+							<button class="replyCommit">回复</button>
+							<button class="replyCancel">取消</button>
+						</div>
+					</div>
+						</ul>
+						<ul class="subNote">
+							<li class="noteId">4-2</li>
+							<li class="subAuthor"><em>张三</em>回复<em>王大年</em><span>2018-10-25 12:30:20</span></li>
+							<li class="note">这次拜访中没有任何收获<span>回复</span></li>
+							<div class="reply">
+						<textarea name="" id="" cols="30" rows="10"></textarea>
+						<div>
+							<button class="replyCommit">回复</button>
+							<button class="replyCancel">取消</button>
+						</div>
+					</div>
+						</ul>
+						<ul class="hideReply subNote">收起回复↑</ul>
+
+					</li>
+				</ul>
+
+			</div>
+
+		</div>
+
+		<!--<div class="add">-->
+			<!--<form action="">-->
+				<!--<div class="title">添加工作<span>X</span></div>-->
+				<!--<div class="workText"><label>工作事项：</label><textarea name="works" id="works" cols="30" rows="10"></textarea></div>-->
+				<!--<button type="button" class="addFile">添加附件</button>-->
+				<!--<label for="">xxxxxx工作报告.doc</label>-->
+				<!--<div class="btn">-->
+					<!--<button type="submit" class="giveBtn">确认提交</button>-->
+					<!--<button type="button" class="cancel">取消添加</button>-->
+				<!--</div>-->
+			<!--</form>-->
+		<!--</div>-->
+
+		<div class="footer">
+		<!--<div class="footer_links">-->
+			<!--<a href="">关于我们</a>-->
+			<!--<span>|</span>-->
+			<!--<a href="">联系我们</a>-->
+			<!--<span>|</span>-->
+			<!--<a href="">招聘人才</a>-->
+			<!--<span>|</span>-->
+			<!--<a href="">友情链接</a>-->
+		<!--</div>-->
+		<p class="copyright">
+			CopyRight © 2018 瑞达期货股份有限公司研究院 All Rights Reserved<br/>电话：010-****888    京ICP备*******8号
+		</p>
+	</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,273 @@
+.pageName{
+    float: left;
+    font-size: 13px;
+    color: #2e558e;
+    margin: 5px 0 0 10px;
+}
+
+.csList{
+    width: 80%;
+    margin: 50px auto;
+    background-color: white;
+    padding-bottom: 20px;
+    box-shadow: 7px -5px 5px #999999;
+}
+.csList .title{
+    width: 100%;
+    text-align: center;
+    background: url("../img/white-title.png");
+    text-shadow: 0 1px #ffffff;
+    height: 35px;
+    font-size: 20px;
+    line-height: 34px;
+    font-weight: bold;
+
+}
+.csList .content{
+    width: 96%;
+    margin: 20px 2% 30px 2%;
+    /*padding: 10px 50px 20px 50px;*/
+    border: 2px dashed #CCC;
+}
+
+.csList table{
+    width: 96%;
+    margin: 10px 2%;
+    font-size: 14px;
+    text-align: center;
+    line-height: 25px;
+    /*border-bottom:1px solid #F00*/
+     /*background:#F00*/
+    border-collapse: separate;
+    border-spacing:0 5px;
+}
+
+.csList table td{
+    /*border-bottom:1px solid #DADBDD;*/
+     /*background:#FFF*/
+    padding: 2px 0;
+}
+.csList .item{
+    border-radius: 5px;
+    background-color:#F2F2F2;
+}
+.csList .item:hover{
+    background-color: #639ACA;
+    color: white;
+    cursor: pointer;
+}
+
+.csList .head{
+    border-bottom: none !important;
+    font-size: 15px;
+    font-weight: bold;
+}
+.csList .updateTime{
+    font-size: 8px;
+    color: #999999;
+}
+
+/*.csList .content .toggle{*/
+    /*!*width: 100%;*!*/
+    /*background-color: #F2F2F2;*/
+    /*margin: 2px 5px 4px 10px;*/
+    /*line-height: 25px;*/
+    /*padding: 7px;*/
+    /*border-bottom: 1px solid #DADBDD;*/
+    /*border-radius: 8px;*/
+/*}*/
+/*.csList .content .toggle:hover{*/
+    /*background-color: #D4D4D4;*/
+    /*border-bottom: 1px solid white;*/
+/*}*/
+/*.csList .content .toggle li{*/
+    /*display: inline-block;*/
+/*}*/
+/*.csList .content .toggle .showOption{*/
+    /*margin-left: 40px;*/
+    /*vertical-align: middle;*/
+
+    /*!*background: url("../img/slidebuttons.png") 73px 37px;*!*/
+    /*width: 18px;*/
+    /*height: 18px;*/
+/*}*/
+/*.option1{*/
+    /*background: url("../img/slidebuttons.png") 73px 37px;*/
+/*}*/
+/*.option2{*/
+    /*background: url("../img/slidebuttons.png") 0 37px;*/
+/*}*/
+
+/*.csList .content .toggle .showOption:hover{*/
+    /*cursor: pointer;*/
+/*}*/
+/*.csList .content .toggle .showDetail {*/
+    /*width: 50%;*/
+    /*cursor: pointer;*/
+/*}*/
+/*.csList .content .toggle .showDetail span{*/
+ /*display: none;*/
+/*}*/
+/*.csList .content .toggle .showDetail:hover{*/
+    /*color: #FE7700;*/
+/*}*/
+/*.csList .content .toggle .business{*/
+    /*font-size: 14px;*/
+
+/*}*/
+/*.csList .content .toggle .setTime{*/
+    /*font-size: 10px;*/
+    /*font-family: inherit;*/
+    /*color: #999999;*/
+    /*float: right;*/
+    /*margin-right: 0;*/
+/*}*/
+
+/*.csList .content .csOption{*/
+    /*display: none;*/
+
+/*}*/
+/*.csList .content .csOption td{*/
+    /*display: block;*/
+
+/*}*/
+/*.csList .content .csOption li{*/
+
+    /*margin: 5px 5px 5px 30px;*/
+    /*padding: 5px 0 5px 3px;*/
+    /*font-size: 13px;*/
+    /*color: #333333;*/
+/*}*/
+/*!*.csList .content .csOption li:hover{*!*/
+    /*!*cursor: pointer;*!*/
+    /*!*color: #FE7700;*!*/
+/*!*}*!*/
+/*.mymouseover{*/
+    /*background-color: #639ACA;*/
+    /*!*border: 0px solid #639ACA;*!*/
+    /*border-radius: 6px;*/
+    /*!*font-size: 15px !important;*!*/
+    /*cursor: pointer;*/
+    /*color: white !important;*/
+/*}*/
+/*.mousecolor{*/
+    /*color: white !important;*/
+/*}*/
+.give{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -115px;
+    margin-left: -150px;
+    width: 300px;
+    height: 230px;
+    background-color: #BADBDD;
+    border-radius: 10px;
+
+
+}
+.give .title, .ogWork .title, .support .title, .modify .title{
+    font-weight: bold;
+    background-color: #639ACA;
+    text-align: center;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 5px 5px 0 0 ;
+}
+.give .title span, .ogWork .title span, .support .title span, .modify .title span{
+    float: right;
+    margin-right: 5px;
+    color: #2e558e;
+    cursor: pointer;
+    font-size: 12px;
+
+}
+
+.give form table{
+    margin: 20px auto;
+}
+
+.give form table td{
+    font-size: 15px;
+    padding: 12px 0;
+}
+.ogWork form table td{
+    font-size: 15px;
+}
+.give table .select{
+    width: 70%;
+}
+.give table .select select{
+    width: 100%;
+}
+.give button, .ogWork button, .support button{
+    width: 70px;
+    height: 25px;
+    font-size: 12px;
+    margin: 10px 15px;
+    background-color: #2a558a;
+    color: white;
+}
+.give .btn, .ogWork .btn, .support .btn{
+    margin: 0 auto;
+    text-align: center;
+}
+.ogWork{
+    display: none;
+    width: 300px;
+    height: 230px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -115px;
+    margin-left: -150px;
+    background-color: #BADBDD;
+    border-radius: 10px;
+
+}
+.ogWork form table{
+    width: 80%;
+    margin: 15px auto;
+}
+.ogWork .workText, .support .workText{
+    width: 80%;
+    font-size: 15px;
+    margin: 5px auto;
+}
+.ogWork .workText label{
+    display: block;
+}
+.ogWork .workText textarea, .support .workText textarea{
+    display: block;
+    width: 100%;
+    height: 50px;
+}
+.support{
+    display: none;
+    width: 300px;
+    height: 230px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -115px;
+    margin-left: -150px;
+    background-color: #BADBDD;
+    border-radius: 10px;
+}
+.support .leader{
+    width: 80%;
+    margin: 15px auto;
+}
+.support .leader em{
+  color: #639ACA;
+}
+.modify{
+    width: 60%;
+    background-color: #BADBDD;
+    border-radius: 10px;
+    position: relative;
+    top: -10%;
+    left: 20%;
+}
+

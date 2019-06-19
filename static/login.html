@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="js/login.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="login">
+	<h3>欢迎登录机构开发服务系统</h3>
+	<form class="loginForm">
+		<div class="loginUserName">
+			<span></span>
+			<input type="text" placeholder="用户名/手机号/邮箱">
+			<div class="noticeUserError">用户名错误</div>
+		</div>
+
+		<div class="loginPsd">
+			<span class="user_icon"></span>
+			<input type="password" placeholder="请输入密码">
+			<div class="noticePsdError">密码含有非法字符</div>
+			<a class="forgetPsd" href="#">忘记密码?</a>
+		</div>
+		<div class="remember"><input type="checkbox">记住我</div>
+		<button type="submit" class="commitBtn">登录</button>
+	</form>
+</div>
+</body>
+</html>

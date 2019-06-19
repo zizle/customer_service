@@ -1,0 +1,73 @@
+.pageName{
+    float: left;
+    font-size: 13px;
+    color: #2e558e;
+    margin: 5px 0 0 10px;
+}
+.content{
+    width: 80%;
+    margin: 50px auto;
+    background-color: white;
+    padding-bottom: 20px;
+    box-shadow: 7px -5px 5px #999999;
+}
+.content .title{
+     width: 100%;
+    text-align: center;
+    background: url("../img/white-title.png");
+    text-shadow: 0 1px #ffffff;
+    height: 35px;
+    font-size: 20px;
+    line-height: 34px;
+    font-weight: bold;
+}
+.content .messageList{
+    width: 90%;
+    height: 400px;
+    /*margin: 20px 5% 0 5%;*/
+    margin: 20px auto;
+    padding: 10px 20px 20px 20px;
+    border: 2px dashed #CCC;
+    overflow: auto;
+}
+.messageList ul{
+    border-bottom: 1px solid silver;
+    margin-bottom: 10px;
+}
+.messageList ul:hover{
+    background-color: #F2F2F2;
+    /*color: white;*/
+    /*background: #C8C8C8;*/
+    cursor: pointer;
+
+}
+.messageList ul li{
+    line-height: 25px;
+
+    font-size: 14px;
+    padding: 2px 5px;
+
+}
+.messageList ul li div{
+    margin-right: 5px;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 5px;
+
+}
+.unread{
+    background: red;
+}
+.messageList ul li span{
+    font-size: 10px;
+    color: #999999;
+    float: right;
+}
+.messageList p{
+    display: inline-block;
+    color: #639ACA;
+}
+
+
+

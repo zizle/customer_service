@@ -1,0 +1,109 @@
+.pageName{
+    float: left;
+    font-size: 13px;
+    color: #2e558e;
+    margin: 5px 0 0 10px;
+}
+.content{
+    width: 80%;
+    margin: 50px auto;
+    background-color: white;
+    padding-bottom: 20px;
+    box-shadow: 7px -5px 5px #999999;
+}
+.content .title{
+     width: 100%;
+    text-align: center;
+    background: url("../img/white-title.png");
+    text-shadow: 0 1px #ffffff;
+    height: 35px;
+    font-size: 20px;
+    line-height: 34px;
+    font-weight: bold;
+}
+.content .timeList{
+    width: 90%;
+    margin: 20px 5% 0 5%;
+    /*padding: 10px 50px 20px 50px;*/
+    /*border: 2px dashed #CCC;*/
+}
+.content .timeList tr:hover td{
+   background-color: #1b6d85;
+    color: white;
+
+}
+
+
+/*.content .timeList ul{*/
+    /*margin: 5px;*/
+    /*padding-bottom: 10px;*/
+    /*border-bottom: 2px dotted darkgray;*/
+/*}*/
+/*.content .timeList ul:hover{*/
+    /*!*background: #CCCCCC;*!*/
+    /*background-color: azure;*/
+/*}*/
+/*.content .timeList .workId{*/
+    /*display: none;*/
+/*}*/
+/*.content .timeList .jobTime{*/
+    /*font-size: 15px;*/
+    /*font-weight: bold;*/
+    /*margin: 5px 20px 5px 8px;*/
+
+
+/*}*/
+/*.content .timeList .job{*/
+    /*margin-left: 50px;*/
+    /*!*margin-bottom: 10px;*!*/
+    /*font-size: 15px;*/
+    /*font-family: "微软雅黑";*/
+    /*line-height: 25px;*/
+/*}*/
+/*.content .timeList .reply{*/
+    /*display: none;*/
+    /*!*margin-top: 5px;*!*/
+    /*margin-left: 50px;*/
+/*}*/
+/*.content .timeList .reply textarea{*/
+    /*width: 99%;*/
+    /*height: 30px;*/
+/*}*/
+/*.content .timeList .reply div{*/
+    /*text-align: right;*/
+    /*margin:5px 1%;*/
+/*}*/
+/*.content .timeList .reply button{*/
+    /*font-size: 6px;*/
+    /*width: 40px;*/
+    /*background-color: #639ACA;*/
+    /*color: white;*/
+/*}*/
+/*.content .timeList .job span{*/
+    /*float: right;*/
+    /*font-size: 10px;*/
+    /*margin-right: 6px;*/
+    /*color: dimgrey;*/
+    /*font-style: normal;*/
+    /*cursor: pointer;*/
+/*}*/
+.content .timeList table{
+    text-align: center;
+    width: 100%;
+    background-color: #CCC;
+}
+.content .timeList .header td{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.content .timeList td{
+    width: 16%;
+    font-size: 14px;
+    background-color: #FFF;
+    padding: 4px 0;
+}
+
+
+
+

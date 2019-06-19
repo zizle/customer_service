@@ -1,0 +1,102 @@
+body{
+    background:url(../img/loginbg.jpg) no-repeat;
+    background-size: cover;
+}
+
+.login{
+    background-color: white;
+    position: relative;
+    width: 400px;
+    margin:100px auto;
+    border: solid silver 2px;
+    border-radius: 5px;
+}
+.login .loginUserName{
+    width: 70%;
+    margin:30px auto;
+}
+.login .loginPsd{
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.login h3{
+    /*width: 100%;*/
+    margin: 0;
+    padding-left: 20px;
+    font-size: 20px;
+    line-height: 45px;
+    border-radius: 4px 4px 0 0 ;
+    background-color: #639ACA;
+}
+.loginUserName span{
+    float: left;
+    width: 36px;
+    height: 35px;
+    background: url("../img/user_icon.jpg") left no-repeat;
+}
+.loginUserName input{
+    /*margin: 0 0 21px -1px;*/
+    padding-left: 7px;
+    width: 80%;
+    height: 33px;
+    border: 1px solid #dedede;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    line-height: 2pc;
+}
+.loginPsd span{
+float: left;
+    width: 36px;
+    height: 35px;
+    background: url("../img/mima_icon.jpg") left no-repeat;
+}
+.loginPsd input{
+    /*margin: 0 0 0 -1px;*/
+    padding-left: 7px;
+    width: 80%;
+    height: 33px;
+    border: 1px solid #dedede;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    line-height: 2pc;
+}
+.forgetPsd{
+    text-decoration: none;
+    position: absolute;
+    right: 10px;
+    top: 38px;
+    font-size: 12px;
+}
+.forgetPsd:hover{
+    color: chocolate;
+}
+.noticeUserError, .noticePsdError{
+    display: none;
+    position: absolute;
+    color: red;
+    font-size: 10px;
+}
+
+.remember{
+    font-size: 12px;
+    margin: 20px 0 3px 15%;
+    color: #2e558e;
+}
+.remember input{
+    /*font-family: Tahoma;*/
+    vertical-align: middle;
+}
+.commitBtn{
+    display: block;
+    width: 68%;
+    margin: 0 0 50px 15%;
+    height: 44px;
+    background: #2e558e;
+    color: #fff;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    border: none;
+    border-radius: 5px;
+}
