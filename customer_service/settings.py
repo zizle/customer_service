@@ -202,7 +202,7 @@ FILES_URL = 'static/%Y/%m/files/'
 FILES_ROOT = os.path.join(BASE_DIR, FILES_URL)
 
 # CORS
-CORS_ORIGIN_WHITELIST = ()
+CORS_ORIGIN_WHITELIST = ("http://127.0.0.1:8080",)
 CORS_ALLOW_CREDENTIALS = True  # 跨域访问后端支持操作cookie
 
 # 配置JWT与认证方法

@@ -14,12 +14,12 @@ logger = logging.getLogger("django")
 
 
 class OrganizationSerializer(serializers.ModelSerializer):
-    create_time = serializers.DateTimeField(format('%Y-%m-%d %H:%M:%S'), read_only=True)
+    update_time = serializers.DateTimeField(format('%Y-%m-%d %H:%M:%S'), read_only=True)
     users = UserBaseInfoSerializer(read_only=True, many=True)
 
     class Meta:
         model = Organization
-        fields = ("id", "name", "create_time", "users")
+        fields = ("id", "name", "update_time", "users")
 
     def create(self, validated_data):
         request_data = self.context["request"].data
@@ -36,7 +36,19 @@ class OrganizationSerializer(serializers.ModelSerializer):
                 request_user.leader = True
                 request_user.organization = organization
                 request_user.save()
+                # 本user的子user也要是这个部门的
+                self.update_sub_user(user=request_user, organization=organization)
                 return organization
+
+    def update_sub_user(self, user, organization):
+        """更新用户的子用户"""
+        subs = user.subs.all()
+        if not subs:
+            return
+        for sub in subs:
+            sub.organization=organization
+            sub.save()
+            self.update_sub_user(sub, organization)
 
 
 class SponsorRelateField(serializers.RelatedField):

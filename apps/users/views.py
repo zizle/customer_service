@@ -150,17 +150,20 @@ class SubUserListView(ListAPIView):
 
 
 class UsersView(ListAPIView):
+    """本用户的所有子用户"""
     serializer_class = UsersSerializer
+    pagination_class = None
     user_sets = []
 
     def get_queryset(self):
         user = self.request.user
         self.user_sets.clear()
         self.get_users(user)
-        return self.user_sets
+        # 过滤掉是leader的user在返回
+        return [user for user in self.user_sets if not user.leader]
 
     def get_users(self, user):
-        subs = user.subs.filter(is_active=True, leader=False)
+        subs = user.subs.filter(is_active=True)
         if not subs:
             return
         for sub in subs:
@@ -169,6 +172,7 @@ class UsersView(ListAPIView):
 
 
 class UserGroupView(APIView):
+    """员工报表接口"""
     permission_classes = [IsAuthenticated]
     user_sets = []
 

@@ -13,7 +13,7 @@ class Organization(BaseModel):
         verbose_name_plural = verbose_name
 
     def __str__(self):
-        return self.name
+        return '%s object (%s)' % (self.__class__.__name__, self.name)
 
 
 class Cooperation(BaseModel):

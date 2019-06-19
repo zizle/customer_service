@@ -1,11 +1,13 @@
 import datetime
+from django.db import transaction
+from rest_framework import status
 from rest_framework.generics import ListAPIView, CreateAPIView
 from rest_framework.views import APIView
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from .serializers import OrganizationSerializer, CooperationSerializer
 from .models import Organization, Cooperation
-from users.models import Support
+from users.models import Support, User
 from users.serializers import SupportSerializer
 from utils.create_notices import create_notice
 
@@ -20,26 +22,92 @@ class CreateOrganizationView(CreateAPIView):
     permission_classes = [IsAuthenticated]
     serializer_class = OrganizationSerializer
 
-    # def post(self, request, *args, **kwargs):
-    #     print(request.data)
-    #     print(request.data)
-    #     print(request.data)
-    #     print(request.data)
-    #     return self.create(self, request, *args, **kwargs)
+    def post(self, request, *args, **kwargs):
+        print(request.data)
+        user = request.user
+        name = request.data.get("name")
+        try:
+            uid = int(request.data.get("user"))
+        except Exception as e:
+            return Response({"status": status.HTTP_400_BAD_REQUEST, "message": "指定负责人有误"})
+        if user.level > 1:
+            return Response({"status": 403, "message": "没有权限创建部门!", "data": ""})
+        # 查询要创建的部门存在直接更新,并且设置相应的leader
+        organization = Organization.objects.filter(name=name)
+        if organization:
+            with transaction.atomic():
+                # 修改部门
+                organization.update(is_active = True)
+                # 设置user
+                user = User.objects.filter(id=uid)
+                user.update(
+                organization=organization.first(),
+                leader=True)
+                # 所有的子user都为这个部门
+                user.first().level=2
+                user.first().save()
+                self.update_sub_user(user=user.first(), organization=organization.first())
+                # 序列化
+                serializer = OrganizationSerializer(instance=organization.first())
+                headers = self.get_success_headers(serializer.data)
+                data = serializer.data
+                data["message"] = "创建成功!"
+            return Response(data, status=status.HTTP_201_CREATED, headers=headers)
+        else:
+            serializer = self.get_serializer(data=request.data)
+            serializer.is_valid(raise_exception=True)
+            self.perform_create(serializer)
+            headers = self.get_success_headers(serializer.data)
+            data = serializer.data
+            data["message"] = "创建成功!"
+            return Response(data, status=status.HTTP_201_CREATED, headers=headers)
+
+    def update_sub_user(self, user, organization):
+        subs = user.subs.all()
+        if not subs:
+            return
+        for sub in subs:
+            sub.organization=organization
+            sub.save()
+            self.update_sub_user(sub, organization)
 
 
 class DeleteOrganization(APIView):
     permission_classes = [IsAuthenticated]
 
     def put(self, request, oid):
-        try:
-            organization = Organization.objects.get(id=oid)
-            organization.is_active = False
-            organization.save()
-        except Exception as e:
-            return Response({"data": "删除失败" + str(e), "status": "500"})
-        else:
-            return Response({"data": "删除成功", "status": "204"})
+        user = request.user
+        if user.level > 1:
+            return Response({"data": "删除失败", "status": 403, "message": "您没有权限删除部门!"})
+        with transaction.atomic():
+            try:
+                organization = Organization.objects.get(id=oid)
+                organization.is_active = False
+                organization.save()
+                # user更新为最近一级父级用户的organization
+                # for user in organization.users.all():
+                #     self.update_user_organization(modify_user=user, user=user)
+                organization.users.update(organization=None, leader=False, level=4)
+            except Exception as e:
+                return Response({"message": "删除失败" + str(e), "status": 500})
+            else:
+                return Response({"message": "删除成功", "status": 204})
+
+    # def update_user_organization(self, modify_user, user):
+    #     parent = user.parent
+    #     if not parent:
+    #         modify_user.organization = None
+    #         modify_user.leader = False
+    #         modify_user.level = 4
+    #         modify_user.save()
+    #         return
+    #     if parent.organization:
+    #         modify_user.organization = parent.organization
+    #         modify_user.leader = False
+    #         modify_user.level = 4
+    #         modify_user.save()
+    #         return
+    #     self.update_user_organization(modify_user=modify_user, user=parent)
 
 
 class CreateCooperationView(CreateAPIView):
