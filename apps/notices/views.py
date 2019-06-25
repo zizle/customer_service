@@ -4,10 +4,8 @@ from rest_framework.response import Response
 from rest_framework.filters import OrderingFilter
 from rest_framework.permissions import IsAuthenticated
 
-from customers.models import Customer
 from .serializers import NoticeSerializer, UpdateStatusSerializer
 from .models import Notice
-
 
 class NoticeListView(ListAPIView):
     serializer_class = NoticeSerializer
@@ -27,6 +25,8 @@ class NoticeUpdateView(UpdateAPIView):
 
 
 class NoticeCount(APIView):
+    permission_classes = [IsAuthenticated]
+    
     def get(self, request):
         user = request.user
         if not user:

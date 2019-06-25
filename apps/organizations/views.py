@@ -29,7 +29,7 @@ class CreateOrganizationView(CreateAPIView):
         try:
             uid = int(request.data.get("user"))
         except Exception as e:
-            return Response({"status": status.HTTP_400_BAD_REQUEST, "message": "指定负责人有误"})
+            return Response({"status": status.HTTP_400_BAD_REQUEST, "message": "指定负责人有误" + str(e)})
         if user.level > 1:
             return Response({"status": 403, "message": "没有权限创建部门!", "data": ""})
         # 查询要创建的部门存在直接更新,并且设置相应的leader

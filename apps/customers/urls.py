@@ -4,7 +4,6 @@
 from django.urls import path, re_path
 from rest_framework import routers
 from . import views
-
 urlpatterns = [
     path(r'customers/user/', views.UserCustomerListView.as_view()),
     re_path(r'^customer/delete/(?P<cid>\d+)/$', views.DeleteCustomerView.as_view()),

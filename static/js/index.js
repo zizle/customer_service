@@ -37,7 +37,7 @@ $(function(){
             type: 'GET',
             contentType: "json",
             headers: {
-                "Authorization": "JWT " + token
+                "Authorization": "JWT "+token
             },
             success: function (res) {
                 // console.log(res)
@@ -70,7 +70,7 @@ $(function(){
                 type: 'GET',
                 contentType: "json",
                 headers: {
-                    "Authorization": "JWT "+token
+                "Authorization": "JWT "+token
                 },
                 success: function (res) {
                     showCustomers(res.results)

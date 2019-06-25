@@ -235,4 +235,4 @@ REST_FRAMEWORK_EXTENSIONS = {
     'DEFAULT_USE_CACHE': 'default',
 }
 # 收集静态文件
-STATIC_ROOT = os.path.join(BASE_DIR, 'default_static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'default_static/')

@@ -8,8 +8,6 @@ from . import views
 urlpatterns = [
     path(r'users/add/', views.CreateUserView.as_view()),
     path(r'login/', obtain_jwt_token),
-    # re_path(r'^users/(?P<user_id>\d+)/$', views.BaseInfoView.as_view())
-    # path(r'users/active/', views.UserActiveView.as_view()),
     path(r'users/password/', views.ModifyPasswordView.as_view()),
     re_path(r'^users/(?P<pk>\d+)/$', views.RetrieveUserView.as_view()),
     path(r'user/update/', views.UpdateUserView.as_view()),
