@@ -13,7 +13,7 @@ class Customer(BaseModel):
     business = models.CharField(max_length=50, verbose_name="业务类型")
     linkman = models.CharField(max_length=50, verbose_name="联系人")
     telephone = models.CharField(max_length=11, verbose_name="联系电话")
-    variety = models.CharField(max_length=50, verbose_name="品种")
+    variety = models.CharField(max_length=512, verbose_name="品种")
     account = models.TextField(verbose_name="开户/交易情况")
     situation = models.TextField(verbose_name="概况描述")
 

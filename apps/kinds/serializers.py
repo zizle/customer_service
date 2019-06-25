@@ -10,4 +10,4 @@ from .models import Kind
 class KindSerializer(serializers.ModelSerializer):
     class Meta:
         model = Kind
-        fields = ("id", "name")
+        fields = ("id", "name", "change_lib")
