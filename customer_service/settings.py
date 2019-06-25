@@ -89,18 +89,18 @@ WSGI_APPLICATION = 'customer_service.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
     # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'HOST': '127.0.0.1',
-    #     'PORT': 3306,
-    #     'USER': 'root',
-    #     'PASSWORD': 'mysql',
-    #     'NAME': 'rd_customer_service',
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     # }
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'HOST': 'localhost',
+        'PORT': 3306,
+        'USER': 'agency_test',
+        'PASSWORD': 'at190625',
+        'NAME': 'customer_service_test',
+    }
 }
 
 # redis
