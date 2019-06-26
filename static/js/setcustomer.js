@@ -3,6 +3,52 @@ $(function () {
     $.each($("#csForm input"), function (index, item) {
         $(this).attr("autocomplete", "off")
     });
+    // 初始化填充品种数据
+    $.ajax({
+        url: host + "kinds/",
+        type: "get",
+        contentType: "application/json",
+        async:false,
+        // success: function (res) {
+        //     var variety_ul = "<ul>";
+        //     $.each(res, function (index, kind) {
+        //         variety_ul += "<li>"+kind.name+"</li>"
+        //     });
+        //     variety_ul += "</ul>";
+        //     $(".choose-variety").html(variety_ul)
+        // }
+        success: function (res) {
+            var variety_ul = "<ul>";
+            $.each(res, function (index, kind){
+                variety_ul += "<li><input type='checkbox' value="+kind.name +">"  +kind.name+" </li> "
+            });
+            variety_ul += "<li><input type='checkbox' value='综合'>综合</li> "
+            variety_ul += "</ul>";
+            $(".choose-variety").html(variety_ul)
+        }
+    });
+    // 监听所有的品种复选框状态事件
+    $(".choose-variety").on("click", "input", function(){
+       var variety_value = $("#customer-variety").val();
+       if($(this).is(":checked")){
+           //console.log("选中" + $(this).val());
+           $("#customer-variety").val(variety_value +$(this).val() + ",");
+
+       }else{
+           //console.log("没选"  + $(this).val());
+           variety_value = variety_value.replace($(this).val() + ",", "");
+           $("#customer-variety").val(variety_value);
+       }
+       $("#customer-variety").attr("title", $("#customer-variety").val());
+    });
+    // 点击空白隐藏品种选择框
+    $(document).click(function(event){
+        var _con = $(".choose-variety");
+        if(!_con.is(event.target) && _con.has(event.target).length === 0){ // Mark 1
+			$('.choose-variety').slideUp();   //滑动消失
+			// $('.choose-variety').hide(1000);          //淡出消失
+        }
+    });
     var cid = getQueryString("cs");
     if(cid){ // 请求当前客户信息，并填充
         $.ajax({
@@ -14,6 +60,7 @@ $(function () {
             },
             async: false,
             success: function (res) {
+                console.log(res);
                 $.each(res, function (field, value) {
                     // input框
                     $.each($("#csForm input"), function (index, item) {
@@ -21,6 +68,18 @@ $(function () {
                             $(this).val(value)
                         }
                     });
+                    // 品种复选框状态
+                    if (field == "variety"){
+                        var variety_arr = value.substring(0, value.length-1).split(",")
+                        console.log(variety_arr);
+                        $(".choose-variety input").each(function(){
+                            // console.log($(this).val());
+                            if ($.inArray($(this).val(), variety_arr) > -1){
+                                // console.log($(this).val() + "在数组中" + $.inArray($(this).val(), variety_arr));
+                                $(this).prop("checked", true)
+                            }
+                        })
+                    }
                     // textarea框
                     $.each($("#csForm textarea"), function (index, item) {
                         if (field == $(this).attr("name")){
@@ -39,22 +98,8 @@ $(function () {
             error: function (e) {
                 console.log("请求客户信息出错...")
             }
-        })
+        });
     }
-    // 初始化填充品种数据
-    $.ajax({
-        url: host + "kinds/",
-        type: "get",
-        contentType: "application/json",
-        success: function (res) {
-            var variety_ul = "<ul>";
-            $.each(res, function (index, kind) {
-                variety_ul += "<li>"+kind.name+"</li>"
-            });
-            variety_ul += "</ul>";
-            $(".choose-variety").html(variety_ul)
-        }
-    });
     // 初始化填充行业（门类）
     var category_item = "";
     $.each(industry.industrylist, function (index, category) {
@@ -68,7 +113,8 @@ $(function () {
     });
     $(".area-first").html(province_item);
    // 选择的input事项
-    $(".choose").on("click", "input", function () {
+    $(".choose").on("click", "input", function (event) {
+        event.stopPropagation();  // 取消事件冒泡，防止执行点击文档空白处再次执行
         $(this).attr("disabled", "disabled");
         $(this).next().toggle();
         $(this).removeAttr("disabled")

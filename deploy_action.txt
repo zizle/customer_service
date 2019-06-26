@@ -2,3 +2,4 @@
 # 修改static/js/public.js里的 host = "http://ServerIp:port/"；mediaHost = "http://ServerIp:port/static/"
 # 执行python manage.py migrate迁移数据
 # 关闭项目文件/项目/settings.py里的DEBUG = False
+# 修改项目文件/项目/wsgi.py

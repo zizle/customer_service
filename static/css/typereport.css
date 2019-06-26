@@ -74,7 +74,7 @@
     margin-top: 5px;
     padding-bottom: 2px;
     display: none;
-    width: 200%;
+    width: 220%;
     border: 1px solid #C8C8C8;
     /*border-top: 0;*/
     background: white;
@@ -139,6 +139,7 @@
 .content .typeList .header td{
     font-size: 14px;
     font-weight: bold;
+    color: #000000;
 }
 
 .content .typeList td{
@@ -151,6 +152,12 @@
    /*cursor: default;*/
     background: #FFFFFF;
     color: #000000;
+}
+.content .typeList .count-tr td {
+    color: black;
+}
+.content .typeList tr td {
+    color: #639ACA;
 }
 .content .typeList tr:hover td{
     cursor: default;
