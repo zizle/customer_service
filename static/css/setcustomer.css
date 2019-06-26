@@ -101,9 +101,29 @@ body{
     border-top: none;
     border-radius: 2px;
 }
-.choose-type ul li{
+.choose-variety {
+    margin-top: 1px;
+    display: none;
+    position: absolute;
+    background: white;
+    left: -webkit-calc(30% + 5px);
+    left: -moz-calc(30% + 5px);
+    left: calc(30% + 5px);
+    width: 88%;
+    border: #C8C8C8 solid 1px;
+}
+.choose-variety ul input{
+    vertical-align: middle;
+    width: 15px;
+    height: 15px;
+}
+.choose-variety ul li{
+    width: 158px;
+    margin: 2px;
+    display: inline-block;
     cursor: pointer;
     color: #639ACA;
+    font-size: 13px;
 }
 .choose-industry-type, .choose-area-type{
     margin-top: 1px;

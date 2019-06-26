@@ -15,7 +15,7 @@ $(function () {
             tableContent += "<tr><td class='tag'>客户类型：</td><td>" + res.type + "</td><td class='tag'>业务类型：</td><td>" + res.business + "</td></tr>";
             tableContent += "<tr><td class='tag'>所属行业：</td><td>" + res.industry + "</td><td class='tag'>所属地区：</td><td>" + res.area + "</td></tr>";
             tableContent += "<tr><td class='tag'>单位联系人：</td><td>" + res.linkman + "</td><td class='tag'>联系电话：</td><td>" + res.telephone + "</td></tr>";
-            tableContent += "<tr><td class='tag'>设计品种：</td><td>" + res.variety + "</td><td class='tag'>资金规模：</td><td>" + res.capital + "</td></tr>";
+            tableContent += "<tr><td class='tag'>涉及品种：</td><td>" + res.variety + "</td><td class='tag'>资金规模：</td><td>" + res.capital + "</td></tr>";
             $(".content table").html(tableContent)
         },
         error: function (e) {
