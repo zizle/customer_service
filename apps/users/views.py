@@ -189,7 +189,7 @@ class UserGroupView(APIView):
             serializer = UserSerializer(instance=sub)
             data = serializer.data
             # 查询用户的客户量
-            customer_count = sub.customers.count()
+            customer_count = sub.customers.filter(delete=False).count()
             if sub.parent:
                 parent = sub.parent.real_name if sub.parent.real_name else sub.parent.username
             else:
