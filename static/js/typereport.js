@@ -5,9 +5,9 @@ $(function () {
         type: "get",
         contentType: "application/json",
         success: function (res) {
-            var variety_select = "<option>不限</option>";
+            var variety_select = "<option id=''>不限</option>";
             $.each(res, function (index, kind) {
-                variety_select += "<option>"+ kind.name+"</option>";
+                variety_select += "<option id="+ kind.id +">"+ kind.name+"</option>";
             });
             $("#variety").html(variety_select);
         }
@@ -154,7 +154,9 @@ $(function () {
    $(".choose .search").click(function () {
        var csType = $("#csType option:selected").text();
        var bsType = $("#bsType option:selected").text();
-       var variety = $("#variety option:selected").text();
+       // var variety = $("#variety option:selected").text();
+       var variety_text = $("#variety option:selected").text();
+       var variety = $("#variety option:selected").attr("id");
        // 查询结果
        $.ajax({
            url: host + 'customer/type',
@@ -174,7 +176,8 @@ $(function () {
                customers = res.data;
                var type = res.search.type || "不限";
                var business = res.search.business || "不限";
-               var variety = res.search.variety || "不限";
+               // var variety = res.search.variety || "不限";
+               var variety = variety_text;
                var area = res.search.area || "不限";
                var count = res.data.length;
                var content = "<tr class='header'><td>客户</td><td>类型</td><td>业务</td><td>品种</td><td>地区</td><td>数量</td></tr>"
