@@ -56,7 +56,7 @@ $(function () {
                         // 本人客户进行跳转
                         window.location.href = "detailcustomer.html?cs="+cid;
                     }else{
-                        alert("您已经转赠了本客户...不能继续查看...")
+                        alert("非本人客户...不能继续查看...")
                     }
                 },
                 error: function (e) {

@@ -286,6 +286,7 @@ $(function () {
                 alert("发起部门协作成功")
                 $("#ogWorkForm")[0].reset();
                 $(".ogWork").hide();
+                $("#cover").hide();
             },
             error: function () {
                 console.log("网络错误,发起部门协作失败")
@@ -316,8 +317,9 @@ $(function () {
             data: JSON.stringify(data),
             success: function (res) {
                 $("#supportForm")[0].reset();
-                $(".support").hide();
                 alert("请求支持成功。")
+                $(".support").hide();
+                $("#cover").hide();
             },
             error: function (e) {
                 console.log("网络错误，请求支持失败..")
