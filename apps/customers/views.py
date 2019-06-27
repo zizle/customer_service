@@ -170,7 +170,7 @@ class TypeCustomerView(APIView):
         request_data = request.query_params
         type = request_data["type"]
         business = request_data["business"]
-        variety = request_data["variety"]
+        variety = request_data["variety"] if request_data["variety"] else "不限"
         area = request_data["area"] if request_data["area"] else "不限"
         # 构造查询字典
         search_dict = dict()
@@ -178,8 +178,8 @@ class TypeCustomerView(APIView):
             search_dict["type"] = type
         if business != "不限":
             search_dict["business"] = business
-        if variety != "不限":
-            search_dict["variety"] = variety
+        # if variety != "不限":
+        #     search_dict["variety"] = variety
 
         # 传入查询字典查询
         customers = customers.filter(**search_dict)
@@ -187,8 +187,15 @@ class TypeCustomerView(APIView):
         if area != "不限":
             search_dict["area"] = area
             customers = customers.filter(area__contains=area)
-
-        serializer = CustomerSerializer(instance=customers, many=True)
+        if variety != "不限":
+            # 品种过滤
+            finally_customer_set = []
+            for customer in customers:
+                if str(variety) in customer.variety.split(','):
+                    finally_customer_set.append(customer)
+        else:
+            finally_customer_set = customers
+        serializer = CustomerSerializer(instance=finally_customer_set, many=True)
         return Response({"data": serializer.data, "message": "查询成功", "search": search_dict, "status": 200})
 
     def get_users_customers(self, user):
