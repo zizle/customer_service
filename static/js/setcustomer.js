@@ -60,7 +60,7 @@ $(function () {
             },
             async: false,
             success: function (res) {
-                console.log(res);
+                // console.log(res);
                 $.each(res, function (field, value) {
                     // input框
                     $.each($("#csForm input"), function (index, item) {
@@ -71,7 +71,7 @@ $(function () {
                     // 品种复选框状态
                     if (field == "variety"){
                         var variety_arr = value.substring(0, value.length-1).split(",")
-                        console.log(variety_arr);
+                        // console.log(variety_arr);
                         $(".choose-variety input").each(function(){
                             // console.log($(this).val());
                             if ($.inArray($(this).val(), variety_arr) > -1){

@@ -37,20 +37,20 @@ class CustomerSerializer(serializers.ModelSerializer):
         return customer
 
     def update(self, instance, validated_data):
-        # 添加被验证去掉的variety字段
-        request = self.context["request"]
-        validated_data["variety"] = request.data.get("variety")
         validated_data = self.variety_to_ids(validated_data)
         self.save_card(validated_data)
         super().update(instance, validated_data)
         return instance
 
-    @staticmethod
-    def variety_to_ids(validated_data):
+
+    def variety_to_ids(self, validated_data):
         """将品种转为id"""
         variety_ids = []
+        # 取出请求的variety,添加被验证去掉的variety字段
+        request = self.context["request"]
+        variety = request.data.get("variety")
         # 去除最后的','并转为列表
-        variety_list = validated_data["variety"][:-1].split(",")
+        variety_list = variety[:-1].split(",")
         for variety_name in variety_list:
             kind_id = Kind.objects.get(name=variety_name).id
             variety_ids.append(str(kind_id))
