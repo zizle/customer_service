@@ -40,7 +40,6 @@ class WorkSerializer(serializers.ModelSerializer):
                     sender=validated_data["user"],
                     receiver=work.customer.belong,
                     customer=work.customer,
-                    status=False,
                     content=work.customer.name
                 )
             return work
@@ -127,7 +126,6 @@ class CreateSubReplySerializer(serializers.ModelSerializer):
                     sender=validated_data["user"],
                     receiver=reply_user,
                     customer=sub_reply.reply.work.customer,
-                    status=False,
                     content=notice_content
                 )
             return sub_reply
@@ -161,7 +159,6 @@ class ReplyWorkSerializer(serializers.ModelSerializer):
                     sender=validated_data["user"],
                     receiver=reply.work.user,
                     customer=reply.work.customer,
-                    status=False,
                     content=reply.work.content
                 )
             return reply

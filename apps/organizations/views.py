@@ -151,7 +151,6 @@ class UpdateOrganizationWork(APIView):
     def put(self, request, wid):
         QueryModel = None
         message = ''
-        receiver = None
         classify = request.data.get("classify")
         action = request.data.get("action")
         authorize = request.data.get("authorize")
@@ -180,14 +179,14 @@ class UpdateOrganizationWork(APIView):
                 customer.update_time = now
                 customer.save()
                 message += ",请于24小时内完成修改操作。"
+            work.handler = self.request.user
             work.save()
             # 创建消息
             create_notice(
                 type=3,
                 sender=request.user,
                 receiver=work.sponsor,
-                content=message,
-                status=False
+                content=message
             )
         except Exception as e:
             return Response({"message": "操作失败save fail", "status": "204"})

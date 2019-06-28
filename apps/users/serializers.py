@@ -64,8 +64,7 @@ class CreateUserSerializer(serializers.ModelSerializer):
                 type=3,
                 sender=request_user,
                 receiver=user,
-                content="今天是个特别的一天，您的账号就在这美好的日子诞生了！欢迎加入瑞达期货。",
-                status=False
+                content="今天是个特别的一天，您的账号就在这美好的日子诞生了！欢迎加入瑞达期货。"
             )
             return user
 
@@ -146,7 +145,6 @@ class SupportSerializer(serializers.ModelSerializer):
                     sender=support.sponsor,
                     receiver=support.sponsor.parent,
                     content="客户<p>--" + support.customer.name + "--</p>信息修改待授权。",
-                    status=False
                 )
             else:
                 create_notice(
@@ -154,7 +152,7 @@ class SupportSerializer(serializers.ModelSerializer):
                     sender=support.sponsor,
                     receiver=support.sponsor.parent,
                     content=support.content,
-                    status=False
+                    organization=support.sponsor.parent.organization  # 请求支持者上级的部门
                 )
         return support
 

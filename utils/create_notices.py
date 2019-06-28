@@ -4,13 +4,15 @@
 from notices.models import Notice
 
 
-def create_notice(type, sender, receiver, content, customer=None, status=False):
+def create_notice(type, sender, receiver, content, customer=None, organization=None):
     notice = Notice(
         type=type,
         sender=sender,
         receiver=receiver,
         content=content,
         customer=customer,
-        status=False
+        organization=organization,
+        status=False,
+        handled=False
     )
     notice.save()

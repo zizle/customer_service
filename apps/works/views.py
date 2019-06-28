@@ -4,7 +4,7 @@ from rest_framework.generics import CreateAPIView
 from rest_framework.filters import OrderingFilter
 
 from .serializers import WorkSerializer, ReplyWorkSerializer, CreateSubReplySerializer
-from .models import Work, ReplyWork, SubReplyWork
+from .models import Work, ReplyWork
 
 
 class WorkViewSet(ModelViewSet):
