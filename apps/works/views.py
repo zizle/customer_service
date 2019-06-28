@@ -26,6 +26,7 @@ class WorkViewSet(ModelViewSet):
 
 class ReplyWorkViewSet(ModelViewSet):
     serializer_class = ReplyWorkSerializer
+    pagination_class = None
 
     def get_queryset(self):
         try:
