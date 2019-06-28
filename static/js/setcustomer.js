@@ -22,7 +22,6 @@ $(function () {
             $.each(res, function (index, kind){
                 variety_ul += "<li><input type='checkbox' value="+kind.name +">"  +kind.name+" </li> "
             });
-            variety_ul += "<li><input type='checkbox' value='综合'>综合</li> "
             variety_ul += "</ul>";
             $(".choose-variety").html(variety_ul)
         }

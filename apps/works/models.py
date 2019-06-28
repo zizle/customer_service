@@ -11,6 +11,8 @@ class Work(BaseModel):
     file = models.FileField(upload_to=settings.FILES_URL, null=True, blank=True, verbose_name="选择附件")
     file_name = models.CharField(max_length=200, blank=True, null=True, verbose_name="附件原始名称")
     delete = models.BooleanField(default=False, verbose_name="标记删除")
+    text_1 =  models.CharField(max_length=128, null=True, blank=True, verbose_name="备用1")
+    text_2 =  models.CharField(max_length=128, null=True, blank=True, verbose_name="备用2")
 
     class Meta:
         db_table = 'works_work'
@@ -23,6 +25,8 @@ class ReplyWork(BaseModel):
     work = models.ForeignKey("Work", related_name="replies", on_delete=models.CASCADE, verbose_name="回复的工作")  # 属于哪条维护内容的子内容
     user = models.ForeignKey("users.User", null=True, blank=True, on_delete=models.CASCADE, verbose_name="回复发起者")
     content = models.TextField(verbose_name="内容")
+    text_1 =  models.CharField(max_length=128, null=True, blank=True, verbose_name="备用1")
+    text_2 =  models.CharField(max_length=128, null=True, blank=True, verbose_name="备用2")
 
     class Meta:
         db_table = 'works_reply'
@@ -36,6 +40,8 @@ class SubReplyWork(BaseModel):
     reply = models.ForeignKey('ReplyWork', related_name="subs", on_delete=models.CASCADE, verbose_name="所属回复")
     content = models.TextField(verbose_name="回复内容")
     parent = models.ForeignKey('self', null=True, blank=True, on_delete=models.SET_NULL, related_name="subs", verbose_name="上级回复")
+    text_1 =  models.CharField(max_length=128, null=True, blank=True, verbose_name="备用1")
+    text_2 =  models.CharField(max_length=128, null=True, blank=True, verbose_name="备用2")
 
     class Meta:
         db_table = "works_sub_reply"

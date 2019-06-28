@@ -13,7 +13,7 @@ class Customer(BaseModel):
     business = models.CharField(max_length=50, verbose_name="业务类型")
     linkman = models.CharField(max_length=50, verbose_name="联系人")
     telephone = models.CharField(max_length=11, verbose_name="联系电话")
-    variety = models.CharField(max_length=512, verbose_name="品种")
+    variety = models.CharField(max_length=256, verbose_name="品种")
     account = models.TextField(verbose_name="开户/交易情况")
     situation = models.TextField(verbose_name="概况描述")
 
@@ -26,6 +26,8 @@ class Customer(BaseModel):
     card_name = models.CharField(max_length=200, blank=True, null=True, verbose_name="名片原始名称")
     belong = models.ForeignKey("users.User", related_name="customers", null=True, blank=True, on_delete=models.SET_NULL, verbose_name="所属用户")
     delete = models.BooleanField(default=False, verbose_name="标记删除")
+    text_1 =  models.CharField(max_length=128, null=True, blank=True, verbose_name="备用1")
+    text_2 =  models.CharField(max_length=128, null=True, blank=True, verbose_name="备用2")
 
     class Meta:
         db_table = 'customers_customer'

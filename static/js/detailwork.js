@@ -45,7 +45,7 @@ $(function () {
                 // console.log(res);
                 var replyHtml = "<div class='reply'><textarea name='' id='' cols='30' rows='10'></textarea><div><button class='replyCommit'>回复</button><button class='replyCancel'>取消</button></div></div>";
                 var notes = "";
-                $.each(res.results, function (index, item) {
+                $.each(res, function (index, item) {
                     notes += "<ul><li class='noteAuthor'>" + item.user + "<span>" + item.update_time + "</span></li>";
                     notes += "<li class='note'>" + item.content + "<span>回复</span></li>";
                     // notes += "<input type='hidden' value=''>";

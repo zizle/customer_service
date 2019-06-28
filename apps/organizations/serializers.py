@@ -85,7 +85,7 @@ class CooperationSerializer(serializers.ModelSerializer):
                 sender=cooperation.sponsor,
                 receiver=receiver,
                 content=cooperation.content,
-                status=False
+                organization=cooperation.organization
             )
             return cooperation
 

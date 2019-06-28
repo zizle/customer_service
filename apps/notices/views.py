@@ -1,3 +1,4 @@
+from django.db.models import Q
 from rest_framework.generics import ListAPIView, UpdateAPIView
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -15,7 +16,9 @@ class NoticeListView(ListAPIView):
 
     def get_queryset(self):
         user = self.request.user
-        return Notice.objects.filter(receiver=user)
+        # 消息返回条件：1 消息接收者=请求者
+        # 消息返回条件：2 消息是部门类时，接收者非部门负责人不可收以及接收者是负责人但所在部门与消息所属部门不符合不可收
+        return Notice.objects.filter(receiver=user).exclude(type=2, receiver__leader=False).exclude(~Q(organization=user.organization), type=2)
 
 
 class NoticeUpdateView(UpdateAPIView):

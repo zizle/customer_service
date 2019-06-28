@@ -1,5 +1,5 @@
 var host = "http://127.0.0.1:8000/";
-var mediaHost = "http://127.0.0.1:8080/";
+var mediaHost = "http://127.0.0.1:8000/";
 var user = JSON.parse(localStorage.getItem("user") || sessionStorage.getItem("user"));
 var pageSize = 10;
 if (!user){
