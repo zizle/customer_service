@@ -5,7 +5,7 @@ $(function () {
         type: "get",
         contentType: "application/json",
         success: function (res) {
-            console.log(res);
+            // console.log(res);
             // setPagination(res.count);
             var orgUl = "";
             $.each(res, function (index, org) {
@@ -91,7 +91,7 @@ $(function () {
                 "Authorization": "JWT " + token
             },
             success: function (res) {
-                console.log(res);
+                // console.log(res);
                 alert(res.message)
                 $(".addOrg input").val("");
                 window.location.reload();
